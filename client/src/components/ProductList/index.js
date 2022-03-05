@@ -29,7 +29,7 @@ function ProductList() {
         type: UPDATE_PRODUCTS,
         products: data.products
       });
-      // but let's also take each product and save it to IndexedDB using the helper function
+      // let's also take each product and save it to IndexedDB using the helper function
       data.products.forEach((product) => {
         idbPromise('products', 'put', product)
       });

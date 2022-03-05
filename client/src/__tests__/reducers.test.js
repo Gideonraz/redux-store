@@ -1,4 +1,4 @@
-// import our actions 
+// imports our actions 
 import {
     UPDATE_PRODUCTS,
     UPDATE_CATEGORIES,
@@ -14,7 +14,7 @@ import {
 import { reducer } from '../utils/reducers';
 
 
-//create a sample of our global state will look like
+//creates a sample of our global state will look like
 const initialState = {
     products: [],
     categories: [{ name: 'Food'}],
@@ -99,7 +99,7 @@ test('REMOVE_FROM_CART', () => {
     // cart is still open
     expect(newState1.cartOpen).toBe(true);
   
-    // the second item should now be the first
+    // the second item should now be the first item
     expect(newState1.cart.length).toBe(1);
     expect(newState1.cart[0]._id).toBe('2');
   
@@ -108,7 +108,7 @@ test('REMOVE_FROM_CART', () => {
       _id: '2'
     });
   
-    // cart is empty and closed
+    // the cart is empty and closed
     expect(newState2.cartOpen).toBe(false);
     expect(newState2.cart.length).toBe(0);
   
